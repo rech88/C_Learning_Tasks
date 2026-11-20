@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int roundup(int a, int b) {
+    if (a > 0)
+        return (a / b) + 1;
+    return a / b;
+    }
+
+int rounddown(int a, int b) {
+    if (a > 0)
+        return a / b;
+    return (a / b) -1;
+}
+
+int roundNull(int a, int b) {
+    return a / b;
+}
+
+int get_remainder(int a, int b) {
+    return (a - rounddown(a, b) * b);
+}
+
+int main() {
+    int a;
+    int b;
+    scanf("%d" "%d", &a, &b);
+    printf("%d " "%d " "%d " "%d",  rounddown(a, b), roundup(a, b),
+            roundNull(a, b), get_remainder(a, b));
+}
+
