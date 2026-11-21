@@ -12,7 +12,7 @@ int main() {
     Label person;
 
     for (int i = 0; i < n; i++) {
-        scanf("%s %d", person.name, &person.age);
+        scanf("%s %d let", person.name, &person.age);
         calcStats(&person, &nameStats, &ageStats);
     }
     printStats(&nameStats, &ageStats);
