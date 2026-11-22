@@ -13,7 +13,7 @@ void printStats(NameStats* nameStats, AgeStats *ageStats) {
 
 
 bool isNameLong(const char name[]){
-    if (strlen(name) >= 10) {
+    if (strlen(name) > 10) {
         return 1;
     }
     return 0;
