@@ -1,5 +1,4 @@
 #pragma once
-#define N 1000
 
 /**
  * Структура описывает карту 
@@ -8,10 +7,18 @@
  * @param top верхняя карта колоды 
  */
 typedef struct Desk{
-    int desk[N];
+    int* desk;
+    int desk_len;
     int bottom;
     int top;
 } Desk;
+
+/**
+ * Инициализирует новую колоду Desk размера n*2
+ * @param desk колода которую требуется инициализировать
+ * @param n по сколько карт содержат колоды
+ */
+void init_desk(Desk* desk, int n);
 
 /**
  * Добавляет карту со значением value в колоду desk

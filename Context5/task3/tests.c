@@ -4,12 +4,15 @@
     #include "desk.h"
 
     void testDesk() {
-        Desk l_desk = { .bottom = 0, .top = 1 };
+        Desk l_desk;
+        init_desk(&l_desk, 5);
         for (int i = 5; i > 0; i--) {
             addCard(&l_desk, i, 1);
         }
         
-        Desk r_desk = { .bottom = 0, .top = 1 };
+
+        Desk r_desk;
+        init_desk(&r_desk, 5);
         for (int i = 5; i > 0; i--) {
             addCard(&r_desk, -(i), 1);
         }
